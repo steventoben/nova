@@ -1,0 +1,71 @@
+.Form-container {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  max-width: 40ch;
+}
+.TextInput-container {
+  position: relative;
+}
+form > .TextInput-container {
+  margin-bottom: 3rem;
+}
+.TextField-label {
+  position: absolute;
+  font-size: 0.875rem;
+  color: var(--floral-white);
+  top: -1.5rem;
+}
+.TextInput-input.TextArea {
+  height: 20ex;
+}
+.TextInput-input {
+  height: var(--field-height);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+
+  width: 100%;
+
+  outline: none;
+  border: 1px solid rgba(26,26,26,0.4);
+
+  border-radius: 0.25rem;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    border-color: rgba(26,26,26,1);
+  }
+  &:focus {
+    /*border-color: rgba(26,26,26,1);
+    border-width: 2px;*/
+    box-shadow: 0px 0px 1px 2px var(--bleu-de-france);
+  }
+}
+
+.FloatingTextField-container {
+  position: relative;
+  height: var(--field-height);
+}
+.FloatingTextField-label {
+  font-family: 'Helvetica';
+  position: absolute;
+  left: 0.5rem;
+  top: 25%;
+  font-size: 1rem;
+  transition: all 150ms ease;
+  color: rgba(24, 24, 24, 0.7);
+  &.Focused {
+    transform: translate(-4px, -1rem);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: white;
+    color: rgba(24, 24, 24, 0.92);
+    padding: 0 0.25rem;
+  }
+}
+.FloatingTextField-input {
+  height: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,104 @@
+.Button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  --bg: white;
+  --fg: black;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  transition: all 200ms ease;
+
+  &.Primary {
+    --bg: var(--bleu-de-france);
+    --fg: var(--floral-white);
+  }
+
+  &.Filled {
+    background-color: var(--bg);
+    color: var(--fg);
+
+    &.Primary:hover {
+      background-color: #006dda;
+    }
+  }
+
+  &.Outline {
+    background-color: transparent;
+    color: var(--bg);
+    border-color: var(--bg);
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.Ghost {
+    background-color: transparent;
+    color: var(--bg);
+    border-color: var(--bg);
+    border-width: 1px;
+    border-style: solid;
+
+    &:hover {
+      background-color: var(--bg);
+      color: var(--fg);
+
+    }
+  }
+
+  &.Text {
+    background-color: transparent;
+    color: var(--fg);
+  }
+
+  &.Arrow {
+    background-color: transparent;
+    color: var(--bg);
+
+    .Button-label::before {
+      content: "";
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      background-color: var(--bleu-de-france);
+      top: calc(100% + 0.25rem);
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 200ms ease;
+    }
+    &:hover {
+      & > .Button-label::before {
+        transform: scaleX(1);
+        opacity: 100%;
+      }
+    }
+  }
+}
+
+.Button-label {
+  font-size: 1rem;
+  font-family: 'Helvetica Nueu', 'Helvetica N', 'Helvetic', 'Inter', Arial;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.Button-arrow {
+  fill: var(--bleu-de-france);
+  //margin-left: 1rem;
+  height: 1.5rem;
+
+  transition: fill 200ms ease, transform 200ms ease;
+  //transform: scale(0.75);
+}
+
+.Button.Arrow:hover {
+  & > .Button-arrow {
+    fill: var(--bleu-de-france);
+    transform: translateX(0.25rem) scale(1);
+  }
+}

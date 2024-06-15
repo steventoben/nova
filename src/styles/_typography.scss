@@ -1,0 +1,119 @@
+.Heading {
+  font-family: 'HelveticaNeueMedium', Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--floral-white);
+  margin-bottom: 0.5rem;
+
+  &.small {
+    font-size: 1rem;
+  }
+  &.medium {
+    font-size: 1.25rem;
+  }
+  &.large {
+    font-size: 1.5rem;
+  }
+  &.xl {
+    font-size: 2rem;
+  }
+  &.xxl {
+    font-size: 2.5rem;
+  }
+
+  
+}
+
+.Light {
+  font-family: 'HelveticaNeueLight';
+}
+.Medium {
+  font-family: 'HelveticaNeueMedium';
+}
+.Bold {
+  font-family: 'HelveticaNeueBold';
+}
+.Heavy {
+  font-family: 'HelveticaNeueHeavy';
+}
+
+.G-Light {
+  font-family: 'GilroyLight';
+}
+.G-Medium {
+  font-family: 'GilroySemiBold';
+}
+.G-Bold {
+  font-family: 'GilroyBold';
+}
+.G-Heavy {
+  font-family: 'GilroyHeavy';
+}
+
+.Heading-effect {
+  position: relative;
+  &::before {
+    content: "";
+    height: 100%;
+    width: 4px;
+    background-color: var(--bleu-de-france);
+    position: absolute;
+    left: -1rem;
+  }
+}
+
+.Body {
+  font-family: Helvetica, Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--floral-white);
+
+  &.small {
+    font-size: 0.875rem;
+  }
+  &.medium {
+    font-size: 1rem;
+  }
+  &.large {
+    font-size: 1.125rem;
+  }
+  &.xl {
+    font-size: 1.25rem;
+  }
+}
+
+.Label {
+  font-family: Helvetica, Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--floral-white);
+
+  &.small {
+    font-size: 0.75rem;
+  }
+  &.medium {
+    font-size: 0.875rem;
+  }
+  &.large {
+    font-size: 1rem;
+  }
+  &.xl {
+    font-size: 1.125rem;
+  }
+
+  
+
+}
+
+.Statistic {
+  font-family: 'Inter', 'Helvetica';
+  font-size: 2.5rem !important;
+  letter-spacing: 0.02em;
+
+}

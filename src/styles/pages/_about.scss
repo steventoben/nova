@@ -1,0 +1,16 @@
+.AboutPage {
+  display: flex;
+  flex-direction: column;
+  //background-color: #ffffff;
+  padding: 1rem;
+  width: 80%;
+  margin: 0 auto;
+
+  & > section {
+    margin-bottom: 4rem;
+  }
+}
+
+.TextPage-container {
+  max-width: 60ch;
+}

@@ -1,0 +1,147 @@
+.Card {
+    position: relative;
+    padding: 1rem;
+    background-color: #222;
+}
+.Card-container {}
+.Card-icon {
+    background-color: aqua;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    clip-path: circle(50% 50%);
+}
+.Card-title {}
+.Card-body {}
+.Card-actions {
+    margin-top: 1rem;
+}
+
+.InfoCard {
+    //margin-bottom: 2rem;
+    &.Card-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .Card-icon {
+        //position: absolute;
+        //left: 50%;
+        align-self: center;
+    }
+    &.Card-title {}
+    &.Card-body {}
+}
+
+.ServiceCard {
+    &.Card-container {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        //max-width: 16rem;
+        width: 32ch;
+        padding: 2rem;
+        border-top: 2px solid var(--bleu-de-france);
+    }
+    .Card-icon {
+        //position: absolute;
+        //left: 50%;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+    .Card-title {
+        text-transform: capitalize;
+        text-align: center;
+    }
+    &.Card-body {}
+    .Price {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .Price-container {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        margin: 1rem 0;
+        //justify-content: space-between;
+    }
+}
+.Cta-container {
+    margin-top: 1rem;
+    color: rgb(66, 172, 255) !important;
+    & > button {
+        padding: 0;
+        color: inherit;
+    }
+}
+.ServicePriceCard {
+    & > .List-container {
+        & > .List {
+            & > .List-item {
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-left: 1rem;
+
+                & > .Checkmark {
+                    background-color: var(--bleu-de-france);
+                    fill: white;
+                    border-radius: 50%;
+                    height: 1rem;
+                    width: 1rem;
+                    position: absolute;
+                    left: -1.5rem;
+                    //margin-left: 1rem;
+                    & > svg {
+                        transform: scale(0.75);
+                    }
+                }
+            }
+        }
+    }
+}
+.Divider {
+    width: 100%;
+    height: 0.125rem;
+    background-color: white;
+    margin: 1rem 0;
+    opacity: 0.1;
+}
+
+.StatCard {
+    margin-bottom: 2rem;
+    &.Card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //max-width: 16rem;
+        width: 40ch;
+        box-shadow: 0px 0px 8px 4px rgba(24, 24, 24, 0.5);
+        padding: 1rem;
+    }
+    .Card-icon {
+        //position: absolute;
+        //left: 50%;
+        align-self: center;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        fill: white;
+    }
+    .Card-title {
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    &.Card-body {}
+    .Card-stat {
+        margin-bottom: 1rem;
+    }
+}
+
+.Card-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}

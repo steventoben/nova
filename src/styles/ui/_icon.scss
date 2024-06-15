@@ -1,0 +1,15 @@
+.Menu-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    & > svg {
+        //fill: var(--bleu-de-france);
+        fill: #ffffff;
+    }
+}
+.Menu-icon-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}

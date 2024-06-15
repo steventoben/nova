@@ -1,0 +1,7 @@
+.Expandable-container {}
+.Expandable-trigger {}
+.Expandable-heading {}
+.Expandable-content {
+    //--max-height: 4rem;
+    max-height: var(--max-height, fit-content);
+}

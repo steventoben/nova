@@ -1,0 +1,78 @@
+.Drawer-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  //position: relative;
+  top: var(--header-height);
+  left: 0;
+
+  background-color: var(--color-bg);
+
+  opacity: 0;
+  z-index: 0;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: all 200ms ease;
+
+  &.Open {
+    z-index: 800;
+    opacity: 100;
+
+    transform: scaleX(1);
+  }
+}
+
+
+.Drawer-button {
+
+  @media screen and (min-width: 40em) {
+    display: none;
+  }
+}
+
+.Drawer-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+}
+
+.Drawer-nav-list-item {
+  padding: 1rem;
+  color: #ffffff;
+
+  & > a {
+    color: inherit;
+  }
+}
+
+.Drawer-link-content {
+  display: flex;
+  align-items: center;
+}
+.Drawer-link-arrow {
+  fill: #ffffff;
+  margin-left: 1rem;
+  height: 1.5rem;
+
+  transition: fill 200ms ease, transform 200ms ease;
+}
+.Drawer-link-label {
+  transition: all 200ms ease;
+}
+
+.Drawer-link {
+  &:hover {
+    & > .Drawer-link-content {
+      & > .Drawer-link-arrow {
+      fill: var(--bleu-de-france);
+      transform: translateX(0.25rem);
+    }
+    & > .Drawer-link-label {
+      color: var(--bleu-de-france);
+    }
+  }
+}
+}
