@@ -1,5 +1,7 @@
 import { DrawerContext } from "@/components/Drawer/Drawer";
-import React from "react";
+import React, { SetStateAction } from "react";
+
+
 
 export function useDrawer() {
     const {isOpen, setIsOpen} = React.useContext(DrawerContext);

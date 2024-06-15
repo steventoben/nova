@@ -1,13 +1,22 @@
 'use client';
-import React, {ReactNode} from "react";
+import React, {ReactNode, SetStateAction} from "react";
 import { Nav, NavLinkType } from "../Nav/Nav";
 import Link from "next/link";
 import { useDrawer } from "@/hooks/useDrawer";
 import { ArrowForwardSvg } from "../Icon/Icon";
 import { navRoutes } from "@/util/routes";
 
+type ContextType = {
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+};
 
-export const DrawerContext = React.createContext({});
+export const DrawerContext = React.createContext<ContextType>({
+    isOpen: false,
+    setIsOpen: function (value: React.SetStateAction<boolean>): void {
+        throw new Error("Function not implemented.");
+    }
+});
 export interface DrawerProviderProps {
     children: ReactNode;
 }
