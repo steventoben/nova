@@ -27,6 +27,25 @@ export function CheckoutProvider(props: ProviderProps) {
     );
 }
 
+export function useCheckout() {
+    const {checkoutState, dispatch} = React.useContext(CheckoutContext);
+    
+    const addToCart = (productId: number) => {
+        dispatch({type: CheckoutActions.AddProduct, payload: {id: productId}});
+    }
+
+    const removeFromCart = (productId: number) => {
+        dispatch({type: CheckoutActions.RemoveProduct, payload: {id: productId}});
+    }
+
+    return {
+        checkoutState,
+        addToCart,
+        removeFromCart
+    };
+
+}
+
 export enum CheckoutActions {
     AddProduct = 'ADD_PRODUCT',
     RemoveProduct = 'REMOVE_PRODUCT'

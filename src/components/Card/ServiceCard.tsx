@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { CheckSvg, SvgElements } from "../Icon/Icon";
 import { Button } from "../Button/Button";
 import { Spacer } from "../Spacer/Spacer";
-import { useCheckout } from "@/context/CheckoutContext";
+//import { useCheckout } from "@/context/CheckoutContext";
 
 interface Props {
     icon: ReactNode;
