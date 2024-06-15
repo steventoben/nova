@@ -1,7 +1,19 @@
 'use client';
 import React, { ReactNode, Reducer, useReducer } from "react";
 
-export const CheckoutContext = React.createContext({});
+type ContextType = {
+    checkoutState: CheckoutState;
+    dispatch: React.Dispatch<CheckoutAction>;
+};
+
+export const CheckoutContext = React.createContext<ContextType>({
+    checkoutState: {
+        products: []
+    },
+    dispatch: function (value: CheckoutAction): void {
+        throw new Error("Function not implemented.");
+    }
+});
 
 function reducer(state: any, action: any) {
     if (action.type === 'incremented_age') {
