@@ -1,8 +1,18 @@
 'use client';
 
-import React from "react";
+import React, { SetStateAction } from "react";
 
-export const TocContext = React.createContext({});
+type ContextType = {
+    activeItem: string;
+    setActiveItem: React.Dispatch<SetStateAction<string>>;
+}
+
+export const TocContext = React.createContext<ContextType>({
+    activeItem: "",
+    setActiveItem: function (value: React.SetStateAction<string>): void {
+        throw new Error("Function not implemented.");
+    }
+});
 interface ProviderProps {
     children: React.ReactNode;
     items: string[];
