@@ -1,4 +1,4 @@
-//'use client';
+'use client';
 import {Text} from "@/components/Typography/Text";
 //import {TableOfContents, TocProvider, useToc} from "@/components/TableOfContents/TableOfContents";
 //import { ViewportObserver } from "@/components/ViewportObserver/ViewportObserver";
