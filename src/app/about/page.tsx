@@ -5,10 +5,9 @@ import { ViewportObserver } from "@/components/ViewportObserver/ViewportObserver
 import { ExpandablePane } from "@/components/Expandable/Expandable";
 
 function AboutPage() {
-    const {activeItem, setActiveItem} = useToc();
+    //const {activeItem, setActiveItem} = useToc();
     return(
         <div className={'Page-container AboutPage TextPage-container'}>
-            <TableOfContents items={['About Us', 'Who We Are', 'What We Offer']} />
             <section className={'Section About-intro TextBlock'}>
                 <Text el={'h1'} fontSize={'1.5rem'} fontWeight={500}>
                     About Us
@@ -18,7 +17,6 @@ function AboutPage() {
                 </Text>
             </section>
 
-            <ViewportObserver onTrigger={() => setActiveItem('who we are')}>
             <section className={'Section About-intro TextBlock'}>
                 <h2 className={'Heading xl Heading-effect'}>
                     Who We Are
@@ -41,7 +39,6 @@ function AboutPage() {
                     imperdiet turpis lobortis ut. Etiam sit amet nulla viverra, blandit ipsum quis, euismod lorem.
                 </p>
             </section>
-            </ViewportObserver>
 
             <div style={{height: '4rem'}} />
 
@@ -51,7 +48,7 @@ function AboutPage() {
             <div style={{height: '4rem'}} />
 
 
-            <ViewportObserver onTrigger={() => setActiveItem('what we offer')}>
+        
             <section className={'Section About-intro TextBlock'}>
                 <h2 className={'Heading xl Heading-effect'}>
                     What We Offer
@@ -70,17 +67,16 @@ function AboutPage() {
                     nulla viverra, blandit ipsum quis, euismod lorem.
                 </p>
             </section>
-            </ViewportObserver>
         </div>
     );
 }
 
-const ProvidedPage = () => {
+/* const ProvidedPage = () => {
     return (
         <TocProvider items={['about us', 'who we are', 'what we offer']}>
             <AboutPage/>
         </TocProvider>
     );
-}
+} */
 
-export default ProvidedPage;
+export default AboutPage;
