@@ -24,9 +24,9 @@ export default function Home() {
           <h3 className="Heading large">Impoartant Statistics</h3>
           <Spacer size={2} />
           {SAMPLE_STATS.map(stat => (
-            <ViewportObserver key={stat.title}>
+            /*{ <ViewportObserver key={stat.title}> }*/
               <StatCard {...stat}  />
-            </ViewportObserver>
+            /* </ViewportObserver> */
           ))}
         </section>
       </div>
