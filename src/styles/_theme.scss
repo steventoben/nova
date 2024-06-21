@@ -1,0 +1,23 @@
+[data-theme="dark"] {
+    --color-background: #1a1a1a;
+    --color-surface-layer-0: #0f0f14;
+    --color-surface: #212121;
+    --color-surface-hover: #212121;
+    --color-field: #2a2a2a;
+    --color-field-hover: #2a2a2a;
+}
+
+[data-theme="light"] {
+    
+}
+
+:root {
+    --color-brand-primary: #7d2b30;
+    --color-brand-primary-light: #f9747c;
+    --color-brand-primary-dark: #411f22;
+    --color-brand-primary-selected: rgba(125, 43, 48, 0.1);
+    --color-primary-hover: #7d2b30;
+    --color-primary-active: #7d2b30;
+    --color-primary-selected: #7d2b30;
+    --color-focus: #7d2b30;
+}

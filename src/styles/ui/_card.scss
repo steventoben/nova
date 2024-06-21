@@ -41,7 +41,9 @@
         //max-width: 16rem;
         width: 32ch;
         padding: 2rem;
-        border-top: 2px solid var(--bleu-de-france);
+        //border-top: 2px solid var(--bleu-de-france);
+        border-top: 2px solid var(--color-brand-primary);
+        box-shadow: 2px 2px 2px 2px rgba(24, 24, 24, 0.5);
     }
     .Card-icon {
         //position: absolute;
@@ -85,7 +87,8 @@
                 margin-left: 1rem;
 
                 & > .Checkmark {
-                    background-color: var(--bleu-de-france);
+                    //background-color: var(--bleu-de-france);
+                    background-color: var(--color-brand-primary);
                     fill: white;
                     border-radius: 50%;
                     height: 1rem;
@@ -141,7 +144,7 @@
 
 .Card-grid {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
-
+    justify-content: center;
 }

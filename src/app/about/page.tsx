@@ -3,6 +3,9 @@ import {Text} from "@/components/Typography/Text";
 //import {TableOfContents, TocProvider, useToc} from "@/components/TableOfContents/TableOfContents";
 //import { ViewportObserver } from "@/components/ViewportObserver/ViewportObserver";
 import { ExpandablePane } from "@/components/Expandable/Expandable";
+import { Spacer } from "@/components/Spacer/Spacer";
+import { TextField } from "@/components/Input/TextField";
+import { TextInput } from "@/components/Input/TextInput";
 
 function AboutPage() {
     //const {activeItem, setActiveItem} = useToc();
@@ -46,6 +49,14 @@ function AboutPage() {
                 imperdiet turpis lobortis ut. Etiam sit amet nulla viverra, blandit ipsum quis, euismod lorem.!!</div>} isExpanded={false}></ExpandablePane>
 
             <div style={{height: '4rem'}} />
+
+            <TextInput />
+
+            <Spacer size={2} />
+
+            <TextField label={"First Name"}  />
+
+            <Spacer size={4} />
 
 
         

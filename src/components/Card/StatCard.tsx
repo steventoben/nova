@@ -13,7 +13,7 @@ export function StatCard(props: StatCardProps) {
         stat
     } = props;
     return (
-        <article className="Card StatCard Card-container">
+        <article className="Card StatCard Card-container Animate GrowFromCenter">
             <div className="Card-icon">
                 {icon}
             </div>

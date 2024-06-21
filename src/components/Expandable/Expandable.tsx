@@ -1,4 +1,6 @@
+'use client';
 import React, { ReactNode } from "react";
+import { ChevronSvg } from "../Icon/Icon";
 
 export interface ExpandableProps {
     id: string;
@@ -14,6 +16,7 @@ export function ExpandablePane(props: ExpandableProps) {
         isExpanded
     } = props;
     const contentRef = React.useRef<HTMLDivElement>(null);
+    const [isActive, setIsActive] = React.useState<boolean>(false);
     React.useLayoutEffect(() => {
         const setHeight = () => {
             const contentEl = contentRef.current;
@@ -30,17 +33,19 @@ export function ExpandablePane(props: ExpandableProps) {
             id={id}
             
             >
-            <div className="Expandable-trigger" 
-            aria-expanded={isExpanded}
+            <div className={`Expandable-trigger ${isActive?"Expanded":''}`} 
+            aria-expanded={isActive}
             tabIndex={0}
             role="button"
             id={`trigger-${id}`}
+            onClick={() => setIsActive(v => !v)}
             >
                 <h3 className="Expandable-heading">
                     {title}
                 </h3>
+                <span className={`Expandable-chevron ${isActive?"Expanded":''}`}><ChevronSvg size={1}/></span>
             </div>
-            <div ref={contentRef} className="Expandable-content" 
+            <div ref={contentRef} className={`Expandable-content ${isActive?"Expanded":''}`} 
                 id={`content-${id}`}
                 aria-labelledby={`trigger-${id}`}
                 >

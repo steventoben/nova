@@ -7,6 +7,7 @@ import { InfoCard } from "@/components/Card/InfoCard";
 import { ServiceCard } from "@/components/Card/ServiceCard";
 import { SAMPLE_STATS, StatCard } from "@/components/Card/StatCard";
 import { Spacer } from "@/components/Spacer/Spacer";
+import { ViewportObserver } from "@/components/ViewportObserver/ViewportObserver";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
           <h3 className="Heading large">Impoartant Statistics</h3>
           <Spacer size={2} />
           {SAMPLE_STATS.map(stat => (
-            <StatCard {...stat} key={stat.title} />
+            <ViewportObserver key={stat.title}>
+              <StatCard {...stat}  />
+            </ViewportObserver>
           ))}
         </section>
       </div>

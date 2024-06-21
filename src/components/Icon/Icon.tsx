@@ -112,6 +112,16 @@ export const CheckSvg = (props: Props) => {
     );
 }
 
+export const ChevronSvg = (props: Props) => {
+    const {
+        size = 1
+    } = props;
+    return (
+        <svg width={`${size}rem`} height={`${size}rem`} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
+            <path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
+        </svg>
+    );
+}
 
 export const SvgElements = {
     FileSvg: <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="file" viewBox="0 0 512 545.5"><path d="M80 80h214.5l5 4.5 96 96 4.5 5V496H80V80zm32 32v352h256V208h-96v-96H112zm192 23v41h41z"></path></svg>,

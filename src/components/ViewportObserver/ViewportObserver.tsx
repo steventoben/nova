@@ -41,7 +41,7 @@ export function ViewportObserver(props: Props) {
             }
         })
     };
-    const observer = new IntersectionObserver( callback, {threshold: 0.25, rootMargin: '50% 0% 50% 0%'});
+    const observer = new IntersectionObserver( callback, {threshold: 0.5, rootMargin: '20% 0% 0% 0%'});
     const fullObserver = new IntersectionObserver(fullObserverCallback, {root: null, threshold: 1, rootMargin: '50% 0% 50% 0%'});
     const targetRef: RefObject<HTMLDivElement> = React.useRef<HTMLDivElement>(null);
     React.useLayoutEffect(() => {

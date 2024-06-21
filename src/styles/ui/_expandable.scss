@@ -1,7 +1,81 @@
 .Expandable-container {}
-.Expandable-trigger {}
+.Expandable-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem;
+
+    transition: all 150ms ease;
+
+    background-color: #2f2f2f;
+
+    position: relative;
+
+    &:hover {
+        background-color: var(--eerie-black);
+        box-shadow: 0px 0px 4px 0px rgba(24, 24, 24, 1);
+    }
+
+    &::before {
+      content: "";
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      //background-color: var(--bleu-de-france);
+      background-color: var(--color-brand-primary);
+      top: calc(100% + 0rem);
+      opacity: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 200ms ease;
+    }
+    &:hover::before {
+        transform: scaleX(1);
+        opacity: 100%;
+    }
+
+    &.Expanded {
+        box-shadow: 0px 0px 4px 0px rgba(24, 24, 24, 1);
+        &::before {
+            transform: scaleX(1);
+            opacity: 100%;
+        }
+    }
+}
 .Expandable-heading {}
+.Expandable-chevron {
+
+    & > svg {
+        transition: all 200ms ease;
+        fill: white;
+        stroke: white;
+        stroke-width: 1px;
+    }
+
+    &.Expanded {
+        & > svg {
+            transform: rotateX(180deg);
+        }
+    }
+}
 .Expandable-content {
     //--max-height: 4rem;
-    max-height: var(--max-height, fit-content);
+    overflow: hidden;
+    
+    max-height: 0;
+
+    padding: 0 1rem;
+
+    transition: max-height 200ms ease;
+    margin-top: 1rem;
+
+    //background-color: #2f2f2f;
+
+    &.Expanded {
+        max-height: var(--max-height, fit-content);
+    }
 }

@@ -67,11 +67,13 @@
   &:hover {
     & > .Drawer-link-content {
       & > .Drawer-link-arrow {
-      fill: var(--bleu-de-france);
+      //fill: var(--bleu-de-france);
+      fill: var(--color-brand-primary);
       transform: translateX(0.25rem);
     }
     & > .Drawer-link-label {
-      color: var(--bleu-de-france);
+      //color: var(--bleu-de-france);
+      color: var(--color-brand-primary-light);
     }
   }
 }
